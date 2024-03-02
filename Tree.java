@@ -15,22 +15,6 @@ class Tree {
 		this.value = value;
 	}
 
-	public Tree getLeft(){
-		return left;
-	}
-
-	public void setLeft(Tree left){
-		this.left = left;
-	}
-
-	public Tree getRight(){
-		return right;
-	}
-
-	public void setRight(Tree right){
-		this.right = right;
-	}
-
 	public void push(int value) {
 		Tree newBranch = new Tree(value);
 
@@ -46,22 +30,6 @@ class Tree {
 				this.right.push(value);
 		}
 	}
-
-	// public void add(int value) {
-	// 	root = push(root, value);
-	// }
-
-	// private Tree push(int value) {
-	// 	if (current == null)
-	// 		return new Tree(value);
-
-	// 	if (value < current.value)
-	// 		current.left = push(current.left, value);
-	// 	else if (value > current.value)
-	// 		current.right = push(current.right, value);
-
-	// 	return current;
-	// }
 
     public void preorderLeft(Tree tree) {
 		if (tree != null) {
