@@ -39,8 +39,7 @@ class Tree {
 				this.left = newBranch;
 			else
 				this.left.push(value);
-		}
-	 	else if (value > this.value) {
+		} else if (value > this.value) {
 			if(right == null)
 				this.right = newBranch;
 			else
