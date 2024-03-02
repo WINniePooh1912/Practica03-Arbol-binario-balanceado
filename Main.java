@@ -7,25 +7,28 @@ public class Main {
 		tree.push(5);
 		tree.push(1);
 		tree.push(8);
-		// tree.add(7);
-		// tree.add(12);
-		// tree.add(51);
-		// tree.add(2);
-		// tree.add(9);
+		tree.push(7);
+		tree.push(12);
+		tree.push(51);
+		tree.push(2);
+		tree.push(9);
 
 		System.out.println("Preorder:");
+		System.out.print("Left: ");
 		tree.preorderLeft(tree);
-		System.out.println();
+		System.out.print("\nRight: ");
 		tree.preorderRight(tree);
 
 		System.out.println("\nPostorder:");
+		System.out.print("Left: ");
 		tree.postorderLeft(tree);
-		System.out.println();
+		System.out.print("\nRight: ");
 		tree.postorderRight(tree);
 
 		System.out.println("\nInorder:");
+		System.out.print("Left: ");
 		tree.inorderLeft(tree);
-		System.out.println();
+		System.out.print("\nRight: ");
 		tree.inorderRight(tree);
 	}
 }
