@@ -1,34 +1,74 @@
 public class Main {
 	public static void main(String[] args) {
-		Tree tree = new Tree(4);
+		Tree treeImbalanced = new Tree();
+		Tree treeBalanced = new Tree();
 
-		tree.push(3);
-		tree.push(89);
-		tree.push(5);
-		tree.push(1);
-		tree.push(8);
-		tree.push(7);
-		tree.push(12);
-		tree.push(51);
-		tree.push(2);
-		tree.push(9);
+		System.out.println("\nA imbalance tree:");
+
+		treeImbalanced.add(3);
+		treeImbalanced.add(89);
+		treeImbalanced.add(5);
+		treeImbalanced.add(1);
+		treeImbalanced.add(8);
+		treeImbalanced.add(7);
+		treeImbalanced.add(12);
+		treeImbalanced.add(51);
+		treeImbalanced.add(2);
+		treeImbalanced.add(9);
 
 		System.out.println("Preorder:");
-		System.out.print("Left: ");
-		tree.preorderLeft(tree);
-		System.out.print("\nRight: ");
-		tree.preorderRight(tree);
+		System.out.print("\tLeft: ");
+		treeImbalanced.preorderLeft(treeImbalanced.getRoot());
+		System.out.print("\n\tRight: ");
+		treeImbalanced.preorderRight(treeImbalanced.getRoot());
 
 		System.out.println("\nPostorder:");
-		System.out.print("Left: ");
-		tree.postorderLeft(tree);
-		System.out.print("\nRight: ");
-		tree.postorderRight(tree);
+		System.out.print("\tLeft: ");
+		treeImbalanced.postorderLeft(treeImbalanced.getRoot());
+		System.out.print("\n\tRight: ");
+		treeImbalanced.postorderRight(treeImbalanced.getRoot());
 
 		System.out.println("\nInorder:");
-		System.out.print("Left: ");
-		tree.inorderLeft(tree);
-		System.out.print("\nRight: ");
-		tree.inorderRight(tree);
+		System.out.print("\tLeft: ");
+		treeImbalanced.inorderLeft(treeImbalanced.getRoot());
+		System.out.print("\n\tRight: ");
+		treeImbalanced.inorderRight(treeImbalanced.getRoot());
+
+		System.out.print("\nShowing imbalanced tree:");
+		treeImbalanced.traverse(treeImbalanced.getRoot());
+
+		System.out.println("\n\n\n\nA self-balance tree:");
+
+		treeBalanced.addBalance(3);
+		treeBalanced.addBalance(89);
+		treeBalanced.addBalance(5);
+		treeBalanced.addBalance(1);
+		treeBalanced.addBalance(8);
+		treeBalanced.addBalance(7);
+		treeBalanced.addBalance(12);
+		treeBalanced.addBalance(51);
+		treeBalanced.addBalance(2);
+		treeBalanced.addBalance(9);
+
+		System.out.println("Preorder:");
+		System.out.print("\tLeft: ");
+		treeBalanced.preorderLeft(treeBalanced.getRoot());
+		System.out.print("\n\tRight: ");
+		treeBalanced.preorderRight(treeBalanced.getRoot());
+
+		System.out.println("\nPostorder:");
+		System.out.print("\tLeft: ");
+		treeBalanced.postorderLeft(treeBalanced.getRoot());
+		System.out.print("\n\tRight: ");
+		treeBalanced.postorderRight(treeBalanced.getRoot());
+
+		System.out.println("\nInorder:");
+		System.out.print("\tLeft: ");
+		treeBalanced.inorderLeft(treeBalanced.getRoot());
+		System.out.print("\n\tRight: ");
+		treeBalanced.inorderRight(treeBalanced.getRoot());
+
+		System.out.print("\nShowing balanced tree:");
+		treeBalanced.traverse(treeBalanced.getRoot());
 	}
 }
