@@ -1,3 +1,8 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+import org.w3c.dom.Node;
+
 class Tree {
 	int value;
 	Tree right;
@@ -208,4 +213,20 @@ class Tree {
 		} else
 			System.out.println("The tree is empty :c");
 	}
+
+	public void traverseInOrder(Tree branch, int spaces) {
+        if (branch == null)
+            return;
+
+		spaces += 10;
+
+        traverseInOrder(branch.right, spaces);
+
+        System.out.print("\n");
+        for (int i = 10; i < spaces; i++)
+            System.out.print(" ");
+        System.out.print(branch.value);
+
+        traverseInOrder(branch.left, spaces);
+    }
 }

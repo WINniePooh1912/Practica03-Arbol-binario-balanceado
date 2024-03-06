@@ -49,5 +49,10 @@ public class Main {
 		tree.traverse(tree.getRootOriginal());
 		System.out.print("\n\nShowing balanced tree:");
 		tree.traverse(tree.getRoot());
+
+		System.out.print("\n\nShowing imbalanced tree (horizontal):");
+		tree.traverseInOrder(tree.getRootOriginal(), 0);
+		System.out.print("\n\nShowing balanced tree (horizontal):");
+		tree.traverseInOrder(tree.getRoot(), 0);
 	}
 }
