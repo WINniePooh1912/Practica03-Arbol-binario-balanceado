@@ -3,6 +3,7 @@ class Tree {
 	Tree right;
 	Tree left;
 	private Tree root;
+	private Tree rootOriginal;
 
 	// other properties
 	int height;
@@ -29,8 +30,8 @@ class Tree {
 		return root;
 	}
 
-	public void add(int value) {
-		root = addRecursive(root, value);
+	public Tree getRootOriginal() {
+		return rootOriginal;
 	}
 
 	private Tree addRecursive(Tree branch, int value) {
@@ -50,6 +51,7 @@ class Tree {
 
 	public void addBalance(int value) {
 		root = addBalanceRecursive(root, value);
+		rootOriginal= addRecursive(rootOriginal, value);
 	}
 
 	private Tree addBalanceRecursive(Tree branch, int value) {
