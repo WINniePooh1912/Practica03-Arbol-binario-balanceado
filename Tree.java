@@ -1,8 +1,3 @@
-import java.util.LinkedList;
-import java.util.Queue;
-
-import org.w3c.dom.Node;
-
 class Tree {
 	int value;
 	Tree right;
